@@ -1,0 +1,18 @@
+{
+  "name": "ChromaControl",
+  "version": "0.18.223",
+  "description": "A control application for my LED lights",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/cdiddy265/ChromaControl",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "Collin Franzen",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.8.2"
+  }
+}
