@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/cdiddy265/ChromaControl#readme",
   "dependencies": {
-    "clubber": "^1.7.1"
+    "clubber": "^1.7.1",
+    "json-socket": "^0.3.0"
   }
 }

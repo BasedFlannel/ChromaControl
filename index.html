@@ -1,3 +1,4 @@
+<!---
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,7 +7,7 @@
   </head>
   <body>
     <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <!-- All of the Node.js APIs are available in this renderer process.
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
@@ -16,4 +17,56 @@
       require('./renderer.js')
     </script>
   </body>
+</html>
+--->
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <style>
+  body, html, #main {
+      height:100%;
+      width:100%;
+  }
+    #spectrumContainer{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 0;
+      left:0;
+      right:0;
+      top:0;
+      z-index:-2;
+      background-color: #2b2b2b;
+    }
+    div.spectrum-bar{
+      background-color: red;
+      display: flex;
+      z-index:-1;
+    }
+    #mainAudio{
+      position: absolute;
+      top:0;
+      left:0;
+      z-index: 200;
+    }
+  </style>
+</head>
+<body>
+  <!--Audio Element to source from
+  <audio id="mainSound" crossOrigin="anonymous" controls>This browser is not supported.</audio>
+  --><!--primary div for putting bars inside-->
+  <div ng-app="chromusicApp" id="main" ng-controller="chromusicCtrl" height="100%">
+    <audio id="mainAudio" crossOrigin="anonymous" src="{{mainAudioSrc}}" autoplay controls></audio>
+    <div id="spectrumContainer">
+      <div class="spectrum-bar" ng-repeat="i in range(30)"
+        ng-style="{'width' : barWidth, 'maxWidth' : barWidth}" data-index={{$index}}>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="indexScript.js"></script>
+</body>
 </html>

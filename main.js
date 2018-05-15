@@ -1,11 +1,10 @@
-const electron = require('electron')
-// Module to control application life.
-const app = electron.app
-// Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
-
+//electron
+const {app,BrowserWindow} = require('electron')
+//path and url modules for electron
 const path = require('path')
 const url = require('url')
+//clubber.js for audio processing
+//const clubber = require('clubber')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
