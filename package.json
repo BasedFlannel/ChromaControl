@@ -1,12 +1,15 @@
 {
-  "name": "ChromaControl",
+  "name": "chromacontrol",
   "version": "0.18.223",
   "description": "A control application for my LED lights",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/cdiddy265/ChromaControl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdiddy265/ChromaControl.git"
+  },
   "keywords": [
     "Electron"
   ],
@@ -14,5 +17,12 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "~1.8.2"
+  },
+  "bugs": {
+    "url": "https://github.com/cdiddy265/ChromaControl/issues"
+  },
+  "homepage": "https://github.com/cdiddy265/ChromaControl#readme",
+  "dependencies": {
+    "clubber": "^1.7.1"
   }
 }
